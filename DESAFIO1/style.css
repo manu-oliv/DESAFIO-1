@@ -1,0 +1,130 @@
+/* ===== 1. PERSONALIZAÇÃO RÁPIDA ===== */
+:root {
+  --text: #ffffff;
+  --muted: #F2E0D5;
+  --card-border: rgba(136, 194, 137, 0.938);
+  --card-bg: rgba(136, 194, 137, 0.938);
+  --accent: #F2E0D5;
+  --page-width: 300px;
+}
+
+* {box-sizing: border-box;}
+html{scroll-behavior: smooth;}
+body{ 
+    margin:0;
+    min-height: 100vh;
+    color: var(--text);
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background:
+        url("Assets/background.jpg") center center/cover fixed no-repeat,
+        #698C68
+}
+
+.page{
+    width: min(var(--page-width)), calc(100%-32px);
+    margin: 0 auto;
+    padding: 48px 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+}
+
+.profilecard,
+.redes-sociais{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 38px;
+    background: #82A67C;
+    box-shadow: 0 15px 45px #F2E0D5;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.profilecard{
+    min-height: 100px;
+    padding: 64px 30px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 18% 72%, rgba(136, 194, 137, 0.37), transparent 90%),
+        radial-gradient(ellipse at 18% 72%, rgba(136, 194, 137, 0.37), transparent 90%),
+        radial-gradient(ellipse at 18% 72%, rgba(136, 194, 137, 0.37), transparent 90%),
+}
+
+.foto{
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-bottom: 32px;
+}
+
+.links{
+    width: min(100%, 385px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: auto;
+
+}
+
+.botoes{
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border: 3px solid rgba(190, 190, 210, 0.25);
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: clamp(1.3rem, 3.8vw, 1.3rem);
+  background: rgba(136, 194, 137, 0.37);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.botoes:hover,
+.botoes:focus-visible {
+  border-color: var(--accent);
+  background: rgba(90, 136, 91, 0.507);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ===== 4. REDES SOCIAIS ===== */
+.redes-sociais {
+  min-height: 145px;
+  padding: 26px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(28px, 7vw, 58px);
+}
+
+.redes-sociais a {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.redes-sociais a:hover,
+.redes-sociais a:focus-visible {
+  color: var(--accent);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
